@@ -1,5 +1,8 @@
 ## Individual Submission.
 
+### [Click here to see my deployed Github Pages](https://fighterkabir.github.io/KabirLab8/)
+### Link itself in-case: https://fighterkabir.github.io/KabirLab8/.
+
 ### Graceful Degradation & Service Workers:
 The relationship between these two concepts makes perfect sense.
 Graceful degradation is all about creating software that makes the most
@@ -15,4 +18,5 @@ on average a worse connection or a lower-end device.
 ### Screenshot of PWA:
 
 ![Screenshot of PWA](./pwa.png)
+
 
