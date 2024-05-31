@@ -54,7 +54,7 @@ function initializeServiceWorker() {
       const registerServiceWorker = async () => {
         try {
           navigator.serviceWorker.register("./sw.js", {
-            scope: "./",
+            scope: "/",
           });
         } catch (error) {
           console.error(`Registration failed with ${error}`);
@@ -132,7 +132,7 @@ async function getRecipes() {
         
     for (let i = 0; i < RECIPE_URLS.length; i++) {
       
-      async () => {
+      const fetchRecipeURLs = async () => {
         try {
 
           let fetchedURL = await fetch(RECIPE_URLS[i]);
@@ -141,7 +141,6 @@ async function getRecipes() {
 
           if (arrOfRecipesFetched.length == RECIPE_URLS.length) {
             saveRecipesToStorage(arrOfRecipesFetched);
-            console.log(arrOfRecipesFetched);
             resolve(arrOfRecipesFetched);
           }
 
@@ -150,6 +149,8 @@ async function getRecipes() {
           reject(error);
         }
       } 
+
+      fetchRecipeURLs();
 
     }
   
