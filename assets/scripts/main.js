@@ -54,7 +54,7 @@ function initializeServiceWorker() {
       const registerServiceWorker = async () => {
         try {
           navigator.serviceWorker.register("./sw.js", {
-            scope: "/",
+            scope: "./",
           });
         } catch (error) {
           console.error(`Registration failed with ${error}`);
